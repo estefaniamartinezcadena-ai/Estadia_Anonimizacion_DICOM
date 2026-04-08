@@ -6,7 +6,6 @@ import numpy as np
 print("Iniciando el motor de Inteligencia Artificial...")
 
 # 1. Conectamos Python con el programa Tesseract  en Windows
-# (La 'r' antes de las comillas es un truquito para que Windows lea bien las barras \)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # 2. Abrimos nuestra radiografía
@@ -15,7 +14,6 @@ radiografia = pydicom.dcmread(ruta_archivo)
 imagen_pixeles = radiografia.pixel_array
 
 # 3. .
-# "normalizar" la imagen para que la IA no se confunda.
 # ajustarle el contraste perfecto antes de dársela a leer.
 imagen_lista_para_ia = cv2.normalize(imagen_pixeles, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
 
