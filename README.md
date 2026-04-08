@@ -1,0 +1,1 @@
+# Estadia_Anonimizacion_DICOM
