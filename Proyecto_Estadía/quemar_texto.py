@@ -21,7 +21,7 @@ tinta_blanca = int(np.max(imagen_rayada))
 # Escribimos el texto en las coordenadas (50, 100) de la imagen
 cv2.putText(imagen_rayada, "PACIENTE: JUAN PEREZ", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, tinta_blanca, 4)
 
-# 4. Ajustamos el contraste (normalizamos) para que la IA lo pueda leer clarito
+# 4. Ajustamos el contraste (normalizamos) para que la IA lo pueda leer 
 imagen_lista_para_ia = cv2.normalize(imagen_rayada, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
 
 # 5. Ponemos a la IA a leer la imagen que acabamos de rayar
@@ -29,7 +29,7 @@ print("Escaneando la imagen modificada...")
 texto_encontrado = pytesseract.image_to_string(imagen_lista_para_ia)
 
 print("-----------------------------------")
-print("🔍 La IA detectó el siguiente texto:")
+print(" La IA detectó el siguiente texto:")
 print(texto_encontrado)
 print("-----------------------------------")
 
